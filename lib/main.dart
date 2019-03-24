@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'bottom_navigation_bar_demo.dart';
+import 'text_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -59,11 +60,7 @@ class MyApp extends StatelessWidget {
               ),
               body: TabBarView(
                 children: <Widget>[
-                  Icon(
-                    Icons.local_florist,
-                    size: 129,
-                    color: Colors.black12,
-                  ),
+                  TextDemo(),
                   Icon(
                     Icons.change_history,
                     size: 129,
