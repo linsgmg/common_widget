@@ -86,11 +86,32 @@ class TextDemo extends StatelessWidget {
                     // ),
                     gradient: LinearGradient(
                         colors: [Colors.red, Colors.green, Colors.purple])),
-              )
+              ),
+              Icon(Icons.pool),
+              MyIcon(Icons.home, size:50),
             ],
           ),
         )
       ],
+    );
+  }
+}
+
+class MyIcon extends StatelessWidget {
+  final IconData _icon;
+  final double size;
+  MyIcon(this._icon, {this.size = 32.0});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Icon(
+        _icon,
+        size: size,
+        color: Colors.white,
+      ),
+      width: size + 50,
+      height: size + 50,
     );
   }
 }
