@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'bottom_navigation_bar_demo.dart';
 import 'text_demo.dart';
 import 'pageview_and_gridview.dart';
+import 'sliver_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -63,11 +64,7 @@ class MyApp extends StatelessWidget {
                 children: <Widget>[
                   TextDemo(),
                   PageAndGridDemo(),
-                  Icon(
-                    Icons.directions_bike,
-                    size: 129,
-                    color: Colors.black12,
-                  )
+                  SliverDemo(),
                 ],
               ),
               drawer: Builder(
