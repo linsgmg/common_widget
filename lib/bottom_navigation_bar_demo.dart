@@ -16,8 +16,15 @@ class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo> {
       if (index == 0) {
         Navigator.pushNamed(context, '/form_demo');
         debugPrint('底部按钮一');
-      } else {
+      } else if(index==1){
         debugPrint('底部按钮二');
+        Navigator.pushNamed(context, '/material_componets_demo');
+      }else if(index==2){
+        debugPrint('底部按钮三');
+        Navigator.pushNamed(context, '/material_componets_demo');
+      }else if(index==3){
+        debugPrint('底部按钮四');
+        Navigator.pushNamed(context, '/material_componets_demo');
       }
     });
   }
@@ -31,9 +38,9 @@ class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo> {
       onTap: _indexHandler,
       items: [
         BottomNavigationBarItem(
-            icon: Icon(Icons.explore), title: Text('explore')),
+            icon: Icon(Icons.format_bold), title: Text('form')),
         BottomNavigationBarItem(
-            icon: Icon(Icons.history), title: Text('history')),
+            icon: Icon(Icons.history), title: Text('buttom')),
         BottomNavigationBarItem(icon: Icon(Icons.list), title: Text('list')),
         BottomNavigationBarItem(
             icon: Icon(Icons.person), title: Text('person')),

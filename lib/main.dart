@@ -4,6 +4,7 @@ import 'text_demo.dart';
 import 'pageview_and_gridview.dart';
 import 'sliver_demo.dart';
 import 'form_demo.dart';
+import 'material_componets.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,8 +20,10 @@ class MyApp extends StatelessWidget {
           highlightColor: Color.fromRGBO(255, 255, 255, 0.1),
           splashColor: Colors.white70,
         ),
-        routes: {
+        initialRoute: '/material_componets_demo',//初始路由
+        routes: {//路由集合
           '/form_demo':(BuildContext context)=>FormDemo(),
+          '/material_componets_demo':(BuildContext context)=>MaterialComponets(),
         },
         home: DefaultTabController(
           length: 3,
