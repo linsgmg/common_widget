@@ -3,6 +3,7 @@ import 'bottom_navigation_bar_demo.dart';
 import 'text_demo.dart';
 import 'pageview_and_gridview.dart';
 import 'sliver_demo.dart';
+import 'form_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,9 +15,13 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.yellow,
+          accentColor: Colors.green[30],
           highlightColor: Color.fromRGBO(255, 255, 255, 0.1),
           splashColor: Colors.white70,
         ),
+        routes: {
+          '/form_demo':(BuildContext context)=>FormDemo(),
+        },
         home: DefaultTabController(
           length: 3,
           child: Scaffold(
@@ -49,7 +54,7 @@ class MyApp extends StatelessWidget {
                   indicatorWeight: 1.0,
                   tabs: <Widget>[
                     Tab(
-                      icon: Icon(Icons.home),
+                      icon: Icon(Icons.home,),
                     ),
                     Tab(
                       icon: Icon(Icons.directions_bike),

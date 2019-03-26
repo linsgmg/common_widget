@@ -10,10 +10,15 @@ class BottomNavigationBarDemo extends StatefulWidget {
 }
 
 class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo> {
-  int _index=0;
+  int _index = 0;
   _indexHandler(int index) {
     setState(() {
-      _index = index;
+      if (index == 0) {
+        Navigator.pushNamed(context, '/form_demo');
+        debugPrint('底部按钮一');
+      } else {
+        debugPrint('底部按钮二');
+      }
     });
   }
 
