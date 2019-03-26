@@ -2,6 +2,8 @@
 
 A new Flutter project.
 
+从零基础开始一点点集成。
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
