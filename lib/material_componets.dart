@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'pop_menu_button_demo.dart';
+import 'check_demo.dart';
+import 'check_demo2.dart';
 
 class MaterialComponets extends StatelessWidget {
   @override
@@ -14,6 +16,8 @@ class MaterialComponets extends StatelessWidget {
           ListItem(title: 'FloatingBotton', page: FloatingBotton()),
           ListItem(title: 'Botton', page: BottonDemo()),
           ListItem(title: 'PopMenuButtonDemo', page: PopMenuButtonDemo()),
+          ListItem(title: 'CheckBoxDemo', page: CheckBoxDemo()),
+          ListItem(title: 'CheckBoxDemo2', page: CheckBoxDemo2()),
         ],
       ),
     );
