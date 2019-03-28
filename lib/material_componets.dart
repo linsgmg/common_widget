@@ -5,6 +5,9 @@ import 'check_demo2.dart';
 import 'simple_dialog_demo.dart';
 import 'chip_demo.dart';
 import 'datatable_demo.dart';
+import 'page_data_table_demo.dart';
+import 'card_demo.dart';
+import 'step_demo.dart';
 
 class MaterialComponets extends StatelessWidget {
   @override
@@ -24,6 +27,9 @@ class MaterialComponets extends StatelessWidget {
           ListItem(title: 'SimpleDialogDemo', page: SimpleDialogDemo()),
           ListItem(title: 'ChipDemo', page: ChipDemo()),
           ListItem(title: 'DataTableDemo', page: DataTableDemo()),
+          ListItem(title: 'PageDataTableDemo', page: PageDataTableDemo()),
+          ListItem(title: 'CardDemo', page: CardDemo()),
+          ListItem(title: 'StepDemo', page: StepDemo()),
         ],
       ),
     );
