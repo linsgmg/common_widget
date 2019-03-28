@@ -39,7 +39,7 @@ class _SimpleDialogDemoState extends State<SimpleDialogDemo> {
         isExpend: false,
       ),
       ExpandPanelItem(
-        headerText: 'Panel B',
+        headerText: 'Panel C',
         body: Container(
           padding: EdgeInsets.all(10),
           width: double.infinity,

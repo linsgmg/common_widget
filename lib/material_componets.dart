@@ -3,6 +3,8 @@ import 'pop_menu_button_demo.dart';
 import 'check_demo.dart';
 import 'check_demo2.dart';
 import 'simple_dialog_demo.dart';
+import 'chip_demo.dart';
+import 'datatable_demo.dart';
 
 class MaterialComponets extends StatelessWidget {
   @override
@@ -20,6 +22,8 @@ class MaterialComponets extends StatelessWidget {
           ListItem(title: 'CheckBoxDemo', page: CheckBoxDemo()),
           ListItem(title: 'CheckBoxDemo2', page: CheckBoxDemo2()),
           ListItem(title: 'SimpleDialogDemo', page: SimpleDialogDemo()),
+          ListItem(title: 'ChipDemo', page: ChipDemo()),
+          ListItem(title: 'DataTableDemo', page: DataTableDemo()),
         ],
       ),
     );
