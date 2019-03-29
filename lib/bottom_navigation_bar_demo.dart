@@ -21,7 +21,7 @@ class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo> {
         Navigator.pushNamed(context, '/material_componets_demo');
       }else if(index==2){
         debugPrint('底部按钮三');
-        Navigator.pushNamed(context, '/material_componets_demo');
+        Navigator.pushNamed(context, '/state_managemet_demo');
       }else if(index==3){
         debugPrint('底部按钮四');
         Navigator.pushNamed(context, '/material_componets_demo');

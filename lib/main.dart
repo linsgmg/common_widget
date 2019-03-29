@@ -1,3 +1,4 @@
+import 'package:demo001/state_demo/state_managemet_demo.dart';
 import 'package:flutter/material.dart';
 import 'bottom_navigation_bar_demo.dart';
 import 'text_demo.dart';
@@ -22,10 +23,11 @@ class MyApp extends StatelessWidget {
           highlightColor: Color.fromRGBO(255, 255, 255, 0.1),
           splashColor: Colors.white70,
         ),
-        initialRoute: '/material_componets_demo',//初始路由
+        initialRoute: '/state_managemet_demo',//初始路由
         routes: {//路由集合
           '/form_demo':(BuildContext context)=>FormDemo(),
           '/material_componets_demo':(BuildContext context)=>MaterialComponets(),
+          '/state_managemet_demo':(BuildContext context)=>StateManagementDemo(),
         },
         home: DefaultTabController(
           length: 3,
