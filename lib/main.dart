@@ -1,4 +1,7 @@
+import 'package:demo001/bloc/bloc_demo.dart';
+import 'package:demo001/http/http_demo.dart';
 import 'package:demo001/state_demo/state_managemet_demo.dart';
+import 'package:demo001/stream/stream_demo.dart';
 import 'package:flutter/material.dart';
 import 'bottom_navigation_bar_demo.dart';
 import 'text_demo.dart';
@@ -14,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.yellow,
@@ -23,11 +26,17 @@ class MyApp extends StatelessWidget {
           highlightColor: Color.fromRGBO(255, 255, 255, 0.1),
           splashColor: Colors.white70,
         ),
-        initialRoute: '/state_managemet_demo',//初始路由
-        routes: {//路由集合
-          '/form_demo':(BuildContext context)=>FormDemo(),
-          '/material_componets_demo':(BuildContext context)=>MaterialComponets(),
-          '/state_managemet_demo':(BuildContext context)=>StateManagementDemo(),
+        // initialRoute: '/stream_demo',//初始路由
+        routes: {
+          //路由集合
+          '/form_demo': (BuildContext context) => FormDemo(),
+          '/material_componets_demo': (BuildContext context) =>
+              MaterialComponets(),
+          '/state_managemet_demo': (BuildContext context) =>
+              StateManagementDemo(),
+          '/stream_demo': (BuildContext context) => StreamDemo(),
+          '/bloc_demo': (BuildContext context) => BlocDemo(),
+          '/http_demo': (BuildContext context) => HttpDemo(),
         },
         home: DefaultTabController(
           length: 3,
@@ -61,7 +70,9 @@ class MyApp extends StatelessWidget {
                   indicatorWeight: 1.0,
                   tabs: <Widget>[
                     Tab(
-                      icon: Icon(Icons.home,),
+                      icon: Icon(
+                        Icons.home,
+                      ),
                     ),
                     Tab(
                       icon: Icon(Icons.directions_bike),
@@ -110,13 +121,18 @@ class MyApp extends StatelessWidget {
                             title: Text('Message', textAlign: TextAlign.right),
                             trailing: Icon(Icons.message,
                                 color: Colors.grey[500], size: 22),
-                            onTap: () => Navigator.pop(context),
+                            // onTap: () => Navigator.pop(context),
+                            onTap: () {
+                              Navigator.pushNamed(context, '/bloc_demo');
+                            },
                           ),
                           ListTile(
                             title: Text('Favorite', textAlign: TextAlign.right),
                             trailing: Icon(Icons.favorite,
                                 color: Colors.grey[500], size: 22),
-                            onTap: () => Navigator.of(context).pop(),
+                            onTap: () {
+                              Navigator.pushNamed(context, '/http_demo');
+                            },
                           ),
                           ListTile(
                             title: Text('Settings', textAlign: TextAlign.right),
