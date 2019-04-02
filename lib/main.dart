@@ -1,6 +1,8 @@
 import 'package:demo001/animation/animation_demo.dart';
 import 'package:demo001/bloc/bloc_demo.dart';
 import 'package:demo001/http/http_demo.dart';
+import 'package:demo001/i18n/i18n_demo.dart';
+import 'package:demo001/i18n/localization_demo.dart';
 import 'package:demo001/state_demo/state_managemet_demo.dart';
 import 'package:demo001/stream/stream_demo.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +12,7 @@ import 'pageview_and_gridview.dart';
 import 'sliver_demo.dart';
 import 'form_demo.dart';
 import 'material_componets.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,6 +21,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: Locale('zh','CN'),
+      // localeResolutionCallback: (Locale locale,Iterable<Locale> supportedLocales){
+      //   return Locale('en','US');
+      // },
+      localizationsDelegates: [
+        LocalizationDemoDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en','US'),
+        Locale('zh','CN'),
+      ],
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
@@ -39,6 +55,7 @@ class MyApp extends StatelessWidget {
           '/bloc_demo': (BuildContext context) => BlocDemo(),
           '/http_demo': (BuildContext context) => HttpDemo(),
           '/animation_demo': (BuildContext context) => AnimationDemo(),
+          '/i18n_demo': (BuildContext context) => I18nDemo(),
         },
         home: DefaultTabController(
           length: 3,
@@ -142,6 +159,14 @@ class MyApp extends StatelessWidget {
                                 color: Colors.grey[500], size: 22),
                             onTap: () {
                               Navigator.pushNamed(context, '/animation_demo');
+                            },
+                          ),
+                          ListTile(
+                            title: Text('i18n', textAlign: TextAlign.right),
+                            trailing: Icon(Icons.airplay,
+                                color: Colors.grey[500], size: 22),
+                            onTap: () {
+                              Navigator.pushNamed(context, '/i18n_demo');
                             },
                           ),
                         ],
