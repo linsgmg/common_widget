@@ -1,3 +1,4 @@
+import 'package:demo001/animation/animation_demo.dart';
 import 'package:demo001/bloc/bloc_demo.dart';
 import 'package:demo001/http/http_demo.dart';
 import 'package:demo001/state_demo/state_managemet_demo.dart';
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
           '/stream_demo': (BuildContext context) => StreamDemo(),
           '/bloc_demo': (BuildContext context) => BlocDemo(),
           '/http_demo': (BuildContext context) => HttpDemo(),
+          '/animation_demo': (BuildContext context) => AnimationDemo(),
         },
         home: DefaultTabController(
           length: 3,
@@ -138,7 +140,9 @@ class MyApp extends StatelessWidget {
                             title: Text('Settings', textAlign: TextAlign.right),
                             trailing: Icon(Icons.settings,
                                 color: Colors.grey[500], size: 22),
-                            onTap: () => Navigator.pop(context),
+                            onTap: () {
+                              Navigator.pushNamed(context, '/animation_demo');
+                            },
                           ),
                         ],
                       ),
